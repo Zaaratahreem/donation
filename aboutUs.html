@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <nav class="nav">
+      <div class="logo-image">
+        <img src="logowebiste.jpg" class="logo" alt="Logo">
+        <a href="index.html"> <p>Eleos's Charitable Wing</p></a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <section class="about-us">
+    <div class="container">
+      <h1>About Us</h1>
+      <p class="intro">Eleos's Charitable wing is a donation platform.</p>
+
+      <div class="about-section">
+        <h2>Who We Are?</h2>
+        <p>At Eleos's Charitable wing, we are a passionate team dedicated to fostering a culture of giving and social impact. Our mission is to connect generous donors with those in need, creating a transparent, efficient, and accessible platform for charitable contributions..</p>
+      </div>
+
+      <div class="about-section">
+        <h2>What We Do?</h2>
+        <p> we believe in making a difference by offering a helping hand to those in need. We work tirelessly to provide support to the less fortunate by accepting donations and redistributing them to individuals and families facing financial hardships. Our goal is to ensure that no one has to go without basic necessities, such as food, shelter, or healthcare. Through the generosity of our donors, we are able to create a better tomorrow by directly assisting the poor and needy, empowering them to rebuild their lives with dignity and hope..</p>
+      </div>
+
+      <div class="about-section">
+        <h2>What Is Our Motive?</h2>
+        <p>Our motive is simple – to create a world where kindness, compassion, and generosity can change lives. We are driven by the desire to support and uplift those who are struggling, ensuring that everyone has access to the basic necessities they need to live a life of dignity. Through every donation we receive, we aim to alleviate the burden on the underprivileged, offering them not just material support, but also hope for a brighter future. .</p>
+      </div>
+
+      <div class="about-section">
+        <h2>Where It All Started?</h2>
+        <p>The Eleos's Charitable wing started with a very little initiative of giving small gifts on the occasions to the less privileged section of our society around us. Gradually we gathered a large number of people which required nurture in abundance and hence the charity wing was form to collectively help the society. </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Your Website | All Rights Reserved</p>
+     
+    </div>
+  </footer>
+</body>
+<!-- script for navbar responsive -->
+<script>function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}</script>
+</html>

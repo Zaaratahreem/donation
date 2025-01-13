@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="header">
+    <nav class="nav">
+      <div class="logo-image">
+        <img src="logowebiste.jpg" class="logo" alt="Logo">
+        <a href="index.html"> <p>Eleos's Charitable Wing</p></a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <section class="contact-us">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out to us using the details below or leave your feedback.</p>
+
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <div class="contact-info-location" style="background:  #6cbb3781;">
+          <h3>Location:</h3>
+          <p>123 Charity Lane, Kindness City, 456789</p>
+        </div>
+        <div class="contact-info-number" style="background:  #6cbb3781;">
+          <h3>Contact Numbers:</h3>
+          <p>+1 234 567 8901</p>
+          <p>+1 987 654 3210</p>
+        </div>
+        <div class="contact-info-email" style="background: #6cbb3781;">
+          <h3>Email:</h3>
+          <p>support@donationwebsite.com</p>
+        </div>
+      </div>
+
+      <!-- Feedback Form -->
+      <form action="/post" method="POST">
+        <div class="feedback-form" style="background: #6cbb3781;">
+          <h2>Send Us Your Feedback</h2>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Feedback:</label>
+          <textarea id="message" name="message" placeholder="Enter your feedback" rows="5" required style="width: 100%;"></textarea>
+
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    
+    </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Your Website | All Rights Reserved</p>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+<!-- script for navbar responsive -->
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default behavior
+    const form = event.target;
+    form.submit(); // Submit form to the server
+});
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }</script>
+
+
+</html>

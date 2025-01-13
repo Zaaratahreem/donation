@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="header">
+    <nav class="nav">
+      <div class="logo-image">
+        <img src="logowebiste.jpg" class="logo" alt="Logo">
+        <a href="index.html"> <p>Eleos's Charitable Wing</p></a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="form-main-page">
+    <div class="form-main-container">
+      <div class="form-image">
+        <div class="form-image-img"><img src="5.jpg" style="width: 92%; border-radius: 20px;"></div>
+        <div class="form-image-text">Everyone is donating <br>
+          <spam class="form-image-text-spam">YOU CAN TOO!</spam>
+        </div>
+      </div>
+      <div class="form-details-container">
+        <div class="form-details">
+          Fill your informations
+        </div>
+
+        <div class="form-quest-a">
+   <form action="/submitDonation" method="POST" >
+
+            <label for="options">I am donating To:</label>
+            <select id="options" name="option" required>
+              <option value="" disabled selected>Select</option>
+              <option value="Children">Children</option>
+              <option value="old age">Old Age</option>
+              <option value="Orphanage">Orphanage</option>
+              <option value="Homeless">Homeless</option>
+            </select>
+        </div>
+        <div class="form-details-first-name">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first_N" style="width: 80%;" required>
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last_N" style="width: 80%;" required>
+          <label for="email">Email-Id</label>
+          <input type="text" id="email" name="email" style="width: 80%;" required>
+          <label for="email">Phone No</label>
+          <input type="number" id="number" name="phone_N" style="width: 80%;" required>
+          <div class="payment-mode">
+            <label>Payment Mode</label>
+            <label class="radio-label">
+              <input type="radio" name="payment-mode" value="google-pay" required> Google Pay
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payment-mode" value="paytm"> Paytm
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payment-mode" value="phonepe"> PhonePay
+            </label>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Your Website | All Rights Reserved</p>
+
+    </div>
+  </footer>
+</body>
+<!-- script for navbar responsive -->
+<script>function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }</script>
+
+</html>

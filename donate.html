@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Navbar styling */
+
+
+        /* Donate Section Styling */
+        .donate-section {
+            display: flex;
+
+            /* margin: 50px 20px; */
+            padding: 20px;
+            background-color: #8beb6e9c;
+        }
+
+        .donate-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 3.125rem;
+            margin-top: 50px; 
+        }
+
+        .donate-content-left {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            padding: 40px 0 5.125rem;
+            /* margin-top: 50px; */
+        }
+
+        .donate-content-left h1 {
+            font-size: 3.25rem;
+            /* color: #000000; */
+            position: relative;
+            line-height: 1.2;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .donate-content-left p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .donate-button {
+            padding: 15px 30px;
+            /* width: 58%; */
+            font-size: 1rem;
+            background-color: #278d1c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: "Roboto", serif;
+            margin-left: 100px;
+        }
+
+        .donate-button:hover {
+            background-color: #278d1ca5;
+        }
+
+        .donate-image-right img {
+            max-width: 85%;
+            border-radius: 10px;
+            padding: 12px 0 0 17px;
+        }
+        /* responsive donate content */
+        @media (max-width: 768px) {
+  .donate-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content */
+  }
+
+  .donate-content-left {
+    text-align: center; /* Center text on smaller screens */
+    padding: 20px;
+  }
+
+  .donate-content-left h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .donate-content-left p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .donate-image-right img {
+    padding: 0; /* Remove padding for a cleaner layout */
+    margin-top: 20px; /* Add spacing between sections */
+  }
+
+  .donate-button {
+    width: 80%; /* Full width button for smaller screens */
+  }
+}
+
+        .status {
+            display: flex;
+            justify-content: center;
+            margin-top: -51px;
+        }
+
+        .status-main {
+            width: 1120px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1607843137254902);
+            border: 1px solid #c9c9c9;
+            border-radius: 10px;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+            z-index: 99;
+        }
+
+        .status-main-text-web {
+            font-family: Roboto, serif;
+            font-size: 1.25rem;
+            color: #21936a;
+            font-weight: 600;
+            background: #f2fffb;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            padding: 3px 10px;
+        }
+
+        .status-main-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .custom-border {
+            background-color: #b9b9b9;
+            width: 2px;
+            height: 53px;
+            opacity: .3;
+        }
+
+        .status-main-container-1 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .status-main-container-1 img {
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+        }
+
+        .status-main-container-1 text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-1-text-heading {
+            font-family: Roboto, serif;
+            font-size: 1.375rem;
+            color: #363636;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .status-1-img {
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+        }
+        /* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .status-main {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Adjust the width for smaller screens */
+    padding: 15px;
+  }
+
+  .status-main-text-web {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .status-main-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add space between items */
+  }
+
+  .status-main-container-1 {
+    flex-direction: column; /* Align text and icons in a single column */
+  }
+
+  .custom-border {
+    display: none; /* Hide the border for a cleaner layout */
+  }
+
+  .status-1-text-heading {
+    font-size: 1rem; /* Smaller font size for mobile */
+    line-height: 1.2;
+  }
+}
+
+        .faq-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 30px;
+            color: #000000;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hiw-hr {
+            width: 55px;
+            text-align: center;
+            color: #21936a;
+            background-color: #21936a;
+            border: none;
+            height: 6px;
+            margin: 1rem auto;
+        }
+        .hiv-hr{
+        width: 1000px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #ffffff;
+            border: none;
+            height: 1px;
+            margin: 0rem auto;
+        }
+        
+.accordion {
+  background-color: #00000098;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.material-icons {
+    font-size: 40px;
+    color: #063c06;
+    vertical-align: middle;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="header">
+        <nav class="nav">
+          <div class="logo-image">
+            <img src="logowebiste.jpg" class="logo" alt="Logo">
+            <a href="index.html"> <p>Eleos's Charitable Wing</p></a>
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="donate-content">
+            <div class="donate-content-left">
+                <h1>Donate The Needy</h1>
+                <p>Your generosity can change lives. Help us support those in need and make a meaningful impact on their
+                    journey to a better future.</p>
+                <form action="donateform.html">
+                    <button type="submit" class="donate-button" style="width: 60%;">Donate Now</button>
+                </form>
+            </div>
+            <div class="donate-image-right">
+                <img src="5.jpg" alt="Helping Hands">
+            </div>
+        </div>
+    </section>
+    <section class="status">
+        <div class="status-main">
+            <div class="status-main-text-web">Fundraiser at 0%* platform fee.</div>
+            <div class="status-main-container">
+                <div class="status-main-container-1">
+                    <div class="status-1-image">
+                        <span class="material-icons">access_time</span>
+
+                    </div>
+                    <div class="status-1-text">
+                        <div class="status-1-text-heading">Quick Funds <br>Disbersal</div>
+                    </div>
+                </div>
+                <div class="custom-border"></div>
+                <div class="status-main-container-1">
+                    <div class="status-1-image"><span class="material-icons">person</span>
+                    </div>
+                    <div class="status-1-text">
+                        <div class="status-1-text-heading">10K <br> Lives impacted</div>
+                    </div>
+                </div>
+                <div class="custom-border"></div>
+                <div class="status-main-container-1">
+                    <div class="status-1-image"><span class="material-icons">pan_tool</span>
+                    </div>
+                    <div class="status-1-text">
+                        <div class="status-1-text-heading">20,000+ <br> patients supported</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="faq-section-main" style="margin-top: 100px;">
+        <div class="faq-content">
+            <div class="faq-title">FAQ
+                <hr class="hiw-hr">
+            </div>
+            <div class="faq-container">
+                <button class="accordion">What is Eleos's charitable wing?</button>
+                
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                </div>
+                <div class="hiv-hr"></div>
+                <button class="accordion">How does the Eleos's charitable wing helps when i need money? </button>
+                
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <hr class="hiv-hr">
+                <button class="accordion">Can i track the impact of my donation?</button>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    
+   <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Your Website | All Rights Reserved</p>
+     
+    </div>
+  </footer>
+
+  
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+<!-- script for navbar responsive -->
+<script>function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }</script>
+</html>
